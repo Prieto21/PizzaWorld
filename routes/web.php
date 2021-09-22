@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/prueba', function () {
-    return 'Hola extraño';
+    return 'Hola';
 });
 //INGRESO A LA PLATAFORMA
 Route::get('/PizzaWorld', function () {
