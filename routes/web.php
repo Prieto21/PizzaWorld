@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return 'Hola';
+    // return 'Hola';
+    return redirect('/PizzaWorld');
 });
 //INGRESO A LA PLATAFORMA
 Route::get('/PizzaWorld', function () {
