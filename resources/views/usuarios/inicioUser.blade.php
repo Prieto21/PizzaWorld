@@ -21,7 +21,8 @@
             </div>
             <div class="col-sm-1">
 
-                <a href="http://localhost:8000/PizzaWorld/UserOut">
+                <!-- <a href="http://localhost:8000/PizzaWorld/UserOut"> -->
+                <a href="http://52.14.138.109:81/PizzaWorld/UserOut">
                     <button>
                         Cerrar
                     </button>

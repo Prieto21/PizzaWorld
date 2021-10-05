@@ -14,7 +14,7 @@
 </head>
 
 <body class="body">
-    <br><br><br><br><br><br>
+    <br><br><br><br>
     <center>
 
         <div class="contenedorlogin">
@@ -106,7 +106,7 @@
             </a>
         </div>
 
-
+<br><br><br>
     </center>
 
     <!-- Optional JavaScript; choose one of the two! -->
