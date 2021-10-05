@@ -1,0 +1,67 @@
+*{
+    font-family: serif;
+    
+}
+.body{
+    margin: 0;
+    padding: 0;
+    background: url(../imagenes/fondo.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.body1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    
+    font-size: 100px;
+    color: white;
+   
+}
+.btn{
+    border: 3px solid rgba( 100,100,100,0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 300%;
+    transition: 1s;
+}
+.btn:hover{
+    background-position: right;
+}
+.btn1{
+    background-image: linear-gradient(to left, red, orange, red);
+}
+
+.contenedorlogin{
+    padding: 1%;
+    border-radius: 8px;
+    background-color: rgba(230, 230, 230, 0.8);
+    width: 80vh;
+    
+    
+}
+.contenedor_terminos{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: start;
+}
+
+.link_registro{
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    color: blue;
+}
