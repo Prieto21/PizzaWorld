@@ -34,8 +34,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <!-- <a class="nav-link " aria-current="page" href="http://52.14.138.109:81/PizzaWorld/User">Inicio</a> -->
-                    <a class="nav-link " aria-current="page" href="http://localhost:8000/PizzaWorld/User">Inicio</a>
+                    <a class="nav-link " aria-current="page" href="http://52.14.138.109:81/PizzaWorld/User">Inicio</a>
+                    <!-- <a class="nav-link " aria-current="page" href="http://localhost:8000/PizzaWorld/User">Inicio</a> -->
                 </li>
 
                 <li class="nav-item">
