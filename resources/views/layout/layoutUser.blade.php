@@ -21,117 +21,97 @@
     <title>World of pizza</title>
 </head>
 <!-- NAVEGACION INICIO -->
-<nav class="navbar navbar-expand-lg navbar-light navbarbg">
+<nav class="navbar navbar-light navbarbg fixed-top">
     <div class="container-fluid">
-        <button class="btn_sidebar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+        <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/User">Inicio</a>
+        <a class="text_navbar" href="http://localhost:8000/PizzaWorld/UserFav">Favoritos</a>
+        <a class="text_navbar" href="#">Loading...<i class="fas fa-tools"></i></a>
+
+
+
+        <!-- BOTON PARA SIDE BAR -->
+        <button class="navbar-toggler btnside" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+            <i class="fas fa-bars"></i>
         </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="http://52.14.138.109:81/PizzaWorld/User">Inicio</a>
-                    <!-- <a class="nav-link " aria-current="page" href="http://localhost:8000/PizzaWorld/User">Inicio</a> -->
-                </li>
-
-                <li class="nav-item">
-                    <!-- <a class="nav-link" href="http://52.14.138.109:81/PizzaWorld/UserFav">Favoritos</a> -->
-                    <a class="nav-link" href="http://localhost:8000/PizzaWorld/UserFav">Favoritos</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Under Construction
-                        <i class="fas fa-tools"></i>
-                    </a>
-                    <ul class="dropdown-menu navbarbg" aria-labelledby="navbarDropdown ">
-                        <li><a class="dropdown-item" href="#">................................
-                        <i class="fas fa-toolbox"></i>
-                            </a></li>
-                        <li><a class="dropdown-item" href="#">................................
-                        <i class="fas fa-toolbox"></i>
-                            </a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">................................
-                        <i class="fas fa-toolbox"></i>
-                            </a></li>
-                    </ul>
-                </li>
-
-            </ul>
+        <!-- BOTON PARA SIDE BAR -->
 
 
 
+        <div class="offcanvas offcanvas-end " style="background-color: rgba(230, 230, 230, 0.6);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header " style="background-color: rgba(230, 230, 230, 0.6);">
+                <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserOut">
+                    <!-- <a class="text_navbar" href="http://localhost:8000/PizzaWorld/UserOut"> -->
+                    <h5 class="offcanvas-title " id="offcanvasNavbarLabel">
+                        <i class="fas fa-door-open " style="color: red;"></i>
+                        Cerrar Sesión
 
-
-            <li class="nav-item dropdown list">
-                <a class="nav-link dropdown-toggle linksesion" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    
-                    Settings Prof...
-                    <i class="fas fa-sliders-h"></i>
+                    </h5>
                 </a>
-                <ul class="dropdown-menu navbarbg" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <!-- <a class="dropdown-item" href="http://52.14.138.109:81/PizzaWorld/UserPerfil">Perfil</a> -->
-                        <a class="dropdown-item" href="http://localhost:8000/PizzaWorld/UserPerfil">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            </div>
+
+            <div class="offcanvas-body " style="background-color: rgba(230, 230, 230, 0.6);">
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-pizza-slice"></i>&nbsp Pizzas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-ice-cream"></i>&nbsp Postres </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-cocktail"></i>&nbsp Bebidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-headset"></i>&nbsp Contactenos</a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">
+                            <i class="fas fa-users"></i>&nbsp Nosotros</a>
+                    </li>
+
+
+
+                </ul>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <hr>
+                <div class="ubicacion">
+                    <!-- <a class="textPerfil" href="http://52.14.138.109:81/PizzaWorld/UserPerfil"> -->
+                    <a class="textPerfil" href="http://localhost:8000/PizzaWorld/UserPerfil">
 
                         <i class="far fa-user-circle"></i>
-                            Perfil
-                        </a>
-                    </li>
-                    <li>
-                        <!-- <a class="dropdown-item" href="http://localhost:8000/PizzaWorld/UserOut"> -->
-                        <a class="dropdown-item" href="http://52.14.138.109:81/PizzaWorld/UserOut">
-
-                        <i class="fas fa-door-open" style="color: red;"></i>
-                            Cerrar Sesión
-                        </a>
-
-                    </li>
+                        Perfil
+                    </a>
+                </div>
 
 
+            </div>
         </div>
     </div>
 </nav>
+
 <!-- NAVEGACION FINAL -->
 
 <body class="body">
-    <section class="containers">
-        <div class="sidebar">
 
-
-            <ul>
-                <li> <i class="fas fa-pizza-slice"></i>&nbsp Pizzas</li>
-                <li><i class="fas fa-ice-cream"></i>&nbsp Postres</li>
-                <li><i class="fas fa-cocktail"></i>&nbsp Bebidas</li>
-                <li>
-                <i class="fas fa-headset"></i>&nbsp Contactenos </li>
-                <li>
-                <i class="fas fa-users"></i>&nbsp Nosotros</li>
-            </ul>
-        </div>
-
-        <div class="content">
-            @yield('contenido')
-
-        </div>
-
-    </section>
+    @yield('contenido')
 
 
 
 
-    <script>
+
+
+    <!-- <script>
         $("button").on('click', function() {
             $(".containers").toggleClass("show");
         });
        
-    </script>
+    </script> -->
 
 
 
