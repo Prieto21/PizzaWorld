@@ -37,7 +37,6 @@
         <!-- BOTON PARA SIDE BAR -->
 
 
-
         <div class="offcanvas offcanvas-end " style="background-color: rgba(230, 230, 230, 0.6);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header " style="background-color: rgba(230, 230, 230, 0.6);">
                 <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserOut">
