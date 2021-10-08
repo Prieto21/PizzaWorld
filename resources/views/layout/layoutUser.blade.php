@@ -9,7 +9,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&display=swap" rel="stylesheet">
 
     <!-- css y java link inicio -->
     <link rel="stylesheet" href="{{ asset('css/stylesUser.css') }}">
@@ -23,8 +25,9 @@
 <!-- NAVEGACION INICIO -->
 <nav class="navbar navbar-light navbarbg fixed-top">
     <div class="container-fluid">
-        <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/User">Inicio</a>
-        <a class="text_navbar" href="http://localhost:8000/PizzaWorld/UserFav">Favoritos</a>
+        <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/User">Inicio <i class="fas fa-home"></i></a>
+        <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserFav">Favoritos <i class="fas fa-star"></i></a>
+        <a class="text_navbar" href="#">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
         <a class="text_navbar" href="#">Loading...<i class="fas fa-tools"></i></a>
 
 
@@ -39,8 +42,8 @@
 
         <div class="offcanvas offcanvas-end " style="background-color: rgba(230, 230, 230, 0.6);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header " style="background-color: rgba(230, 230, 230, 0.6);">
-                <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserOut">
-                    <!-- <a class="text_navbar" href="http://localhost:8000/PizzaWorld/UserOut"> -->
+                
+                    <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserOut">
                     <h5 class="offcanvas-title " id="offcanvasNavbarLabel">
                         <i class="fas fa-door-open " style="color: red;"></i>
                         Cerrar Sesión
@@ -77,11 +80,11 @@
 
 
                 </ul>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br>
                 <hr>
                 <div class="ubicacion">
-                    <!-- <a class="textPerfil" href="http://52.14.138.109:81/PizzaWorld/UserPerfil"> -->
-                    <a class="textPerfil" href="http://localhost:8000/PizzaWorld/UserPerfil">
+                    <a class="textPerfil" href="http://52.14.138.109:81/PizzaWorld/UserPerfil">
+                    <!-- <a class="textPerfil" href="http://127.0.0.1:8000/PizzaWorld/UserPerfil"> -->
 
                         <i class="far fa-user-circle"></i>
                         Perfil
@@ -101,7 +104,24 @@
     @yield('contenido')
 
 
-
+    <!-- INICIO DE PIE DE PAGINA -->
+    <div class="container-fluid contentRecetas">
+        <br>
+        <h5 class="textFin">© 2021 WorldOfPizza.SAS - Página Desarrollada Por Sergio Prieto </h5>
+        <hr>
+        
+        <figure class="redesSociales">
+            <a class="redeslink" href="https://web.facebook.com/"><i class="fab fa-facebook face"></i></a>
+            <a class="redeslink" href="https://www.youtube.com/"><i class="fab fa-youtube you"></i></a>
+            <a class="redeslink" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp what"></i></a>
+            <a class="redeslink" href="https://www.instagram.com/"><i class="fab fa-instagram inst"></i></a>
+            <a class="redeslink" href="https://mail.google.com/"><i class="fab fa-google-plus-g gmail"></i></a>
+            
+            
+        </figure>
+        <br>
+    </div>
+    <!-- CIERRE DE PIE DE PAGINA -->
 
 
 

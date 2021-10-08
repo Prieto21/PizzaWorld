@@ -82,14 +82,14 @@
                 </div>
                 
                 
+                
                 <a href="http://52.14.138.109:81/PizzaWorld/User">
-                <!-- <a href="http://localhost:8000/PizzaWorld/User"> -->
                     <button type="button" class="btn btn1 ">Crear</button>
                 </a>
 
             </form>
+            
             <a class="link_registro" href="http://52.14.138.109:81/PizzaWorld/login">
-            <!-- <a class="link_registro" href="http://localhost:8000/PizzaWorld/login"> -->
                 Atras
             </a>
         </div>
