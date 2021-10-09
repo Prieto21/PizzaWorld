@@ -411,3 +411,117 @@ list-style: none;
 }
 
  /* FIN DE PAGINA */
+
+ /* Perfiles */
+ .contenedor_Perfil{
+    background-color: rgba(255, 255, 255, 0.644);
+    
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    padding: 10px;
+    max-width: 40rem;
+ }
+ 
+.contenedor_Perfil:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+    
+}
+.contenedor_Perfil .iconUser{
+    font-size: 100px;
+}
+
+.contenedor_Perfil .infoPerfil{
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.349);
+    display: flex;
+    flex-direction:column;
+justify-content:center;
+align-content: center;
+text-align: center;
+
+    
+    
+}
+.contenedor_Perfil .infoPerfil:hover{
+    border-width: 1px;
+    border-color: black;
+    
+    transition: 0.7s;
+    
+}
+.btn{
+    border: 3px solid rgba( 100,100,100,0.1);
+    margin-bottom: 20px;
+    max-width: 37rem;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 300%;
+    transition: 1s;
+    width: 760px;
+}
+.btn:hover{
+    background-position: right;
+}
+.btn1{
+    background-image: linear-gradient(to left, red, orange, red);
+}
+.btn2{
+    border: 3px solid rgba( 100,100,100,0.1);
+    margin-bottom: 20px;
+    width: 100px;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 300%;
+    transition: all 500ms ease-out;
+    background-image: linear-gradient(to left, red,darkred,red);
+    opacity: 70%;
+    
+    
+}
+.btn3{
+    border: 3px solid rgba( 100,100,100,0.1);
+    margin-bottom: 20px;
+    width: 100px;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 300%;
+    background-image: linear-gradient(to left, green, greenyellow, green);
+    opacity: 70%;
+    transition: all 500ms ease-out;
+    
+}
+.btn2:hover{
+    
+    transition: 0.7s;
+    opacity: 100%;
+}
+.btn3:hover{
+    
+    transition: 0.7s;
+    opacity: 100%;
+}
+.contentModal{
+    margin: 35px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+ /* Fin de Perfiles */
