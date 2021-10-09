@@ -103,7 +103,9 @@ list-style: none;
 .text_navbar:hover{
     color: black;
     transition: 0.6s;
-    
+    background-color: rgba(0, 0, 0, 0.082);
+    border-radius: 10px;
+    padding: 3px;
     font-size: 23px;
 }
 .nav-item i{
