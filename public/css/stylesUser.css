@@ -34,6 +34,35 @@
     
 }
 /* MENU INICIO */
+.IconoNav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.IconoNav p{
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    
+    
+}
+.IconoNav p:hover{
+    transition: 0.7s;
+    color:black;
+}
+.IconoNav img{
+    
+    max-width: 2.5rem;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    
+}
+.IconoNav img:hover{
+    max-width: 3rem;
+    transform: rotate(360deg);
+    transition: 0.7s;
+    
+}
 .navbarbg{
     background-color: rgba(255, 255, 255, 0.842);
     transition: all 500ms ease-out;

@@ -25,6 +25,7 @@
 <!-- NAVEGACION INICIO -->
 <nav class="navbar navbar-light navbarbg fixed-top">
     <div class="container-fluid">
+    <div class="IconoNav"><p>W</p><img src="{{ asset('imagenes/Icono_pagina.png') }}" ><p>P</p></div>
         <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/User">Inicio <i class="fas fa-home"></i></a>
         <a class="text_navbar" href="http://52.14.138.109:81/PizzaWorld/UserFav">Favoritos <i class="fas fa-star"></i></a>
         <a class="text_navbar" href="#">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
