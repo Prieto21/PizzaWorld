@@ -10,7 +10,8 @@
     </center>
     <br>
     
-    <a href="http://52.14.138.109:81/PizzaWorld/login">
+    <!-- <a href="http://52.14.138.109:81/PizzaWorld/login"> -->
+    <a href="{{url('/PizzaWorld/login')}}">
         <button class="btn btn1">
             Comenzar
         </button>
