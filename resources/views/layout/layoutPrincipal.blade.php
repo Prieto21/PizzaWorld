@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <script src="https://kit.fontawesome.com/2b14a6eef6.js" crossorigin="anonymous"></script>
+    <!-- ICONO DE NAVEGADOR -->
+<link rel="shortcut icon" href="https://i.pinimg.com/originals/ae/ae/4e/aeae4ead932a81071dec412d33491acd.png" />
+<!-- ICONO DE NAVEGADOR -->
     <title>World of pizza</title>
 </head>
 

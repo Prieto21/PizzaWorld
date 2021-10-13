@@ -29,6 +29,31 @@ class UsuariosController extends Controller
         return view('usuarios.UserFavoritos');
         
     }
+    public function index5()
+    {
+        return view('usuarios.RecetPizzas');
+        
+    }
+    public function index6()
+    {
+        return view('usuarios.RecetBebidas');
+        
+    }
+    public function index7()
+    {
+        return view('usuarios.RecetPostres');
+        
+    }
+    public function index8()
+    {
+        return view('usuarios.NosotrosUser');
+        
+    }
+    public function index9()
+    {
+        return view('usuarios.Contactenos');
+        
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -37,16 +37,26 @@
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <input type="text" required class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="password" required class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
 
-                <!-- Email -->
+                <!-- Email y edad -->
 
-                <div class="input-group mb-3">
+                <div class="row g-2">
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
 
-                    <input type="text" required class="form-control" placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" required class="form-control" placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-group mb-3">
+
+                            <input type="text" required class="form-control" placeholder="Edad" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Ultimos datos -->
@@ -83,13 +93,13 @@
                 
                 
                 
-                <a href="http://52.14.138.109:81/PizzaWorld/User">
+                <a href="{{url('/PizzaWorld/User')}}">
                     <button type="button" class="btn btn1 ">Crear</button>
                 </a>
 
             </form>
             
-            <a class="link_registro" href="http://52.14.138.109:81/PizzaWorld/login">
+            <a class="link_registro" href="{{url('/PizzaWorld/login')}}">
                 Atras
             </a>
         </div>

@@ -1,8 +1,9 @@
 @extends('layout.layoutUser')
 @section('contenido')
 <br><br>
+
 <div class="container-fluid ContNosotros">
-<h1 class="textPrincipal">Mis Recetas Favoritas</h1>
+<h1 class="textPrincipal">Pizzas</h1>
 <div class="container-fluid ContRecet">
     <br>
     <hr>
@@ -16,7 +17,7 @@
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
 
                 </div>
             </div>
@@ -29,7 +30,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -41,7 +42,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -58,7 +59,7 @@
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
 
                 </div>
             </div>
@@ -71,7 +72,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -83,7 +84,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -100,7 +101,7 @@
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-starfar fa-star"></i></button></center>
 
                 </div>
             </div>
@@ -113,7 +114,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -125,7 +126,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <center><button type="button" class="btn btn-outline-danger" style="width: 5rem;"><i class="fas fa-ban"></i></button></center>
+                    <center><button type="button" class="btn btn-outline-warning" style="width: 5rem;"><i class="far fa-star"></i></button></center>
                 </div>
             </div>
         </div>
@@ -133,8 +134,9 @@
     </div>
     <br>
 </div>
-<br>
-</div>
+
+<br></div>
+
 
 
 

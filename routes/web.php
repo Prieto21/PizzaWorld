@@ -36,6 +36,11 @@ Route::resource('PizzaWorld/User', 'UsuariosController');
 Route::get('PizzaWorld/UserOut', 'UsuariosController@index2');
 Route::get('PizzaWorld/UserPerfil', 'UsuariosController@index3');
 Route::get('PizzaWorld/UserFav', 'UsuariosController@index4');
+Route::get('PizzaWorld/Receta_Pizzas', 'UsuariosController@index5');
+Route::get('PizzaWorld/Receta_Bebidas', 'UsuariosController@index6');
+Route::get('PizzaWorld/Receta_Postres', 'UsuariosController@index7');
+Route::get('PizzaWorld/Nosotros', 'UsuariosController@index8');
+Route::get('PizzaWorld/Contactenos', 'UsuariosController@index9');
 
 //PARTE DE ADMIN PARTICULARES
 Route::resource('PizzaWorld/Admin', 'AdministradorController');

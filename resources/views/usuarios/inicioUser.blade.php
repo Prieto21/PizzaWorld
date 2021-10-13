@@ -58,41 +58,46 @@
   <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
+      <a href="{{url('/PizzaWorld/Receta_Bebidas')}}">
+        <div class="contenedor">
+          <figure>
+            <img src="{{ asset('imagenes/opcion2.jpg') }}" alt="">
+            <div class="capa">
+              <h3>BEBIDAS</h3>
+              <p>¡Variedad en bebidas! <br> Porque ninguna increible historia empieza con una ensalada. </p>
+            </div>
+          </figure>
 
-      <div class="contenedor">
-        <figure>
-          <img src="{{ asset('imagenes/opcion2.jpg') }}" alt="">
-          <div class="capa">
-            <h3>BEBIDAS</h3>
-            <p>¡Variedad en bebidas! <br> Porque ninguna increible historia empieza con una ensalada. </p>
-          </div>
-        </figure>
-
-      </div>
+        </div>
+      </a>
     </div>
     <div class="col">
-      <div class="contenedor">
-        <figure>
-          <img src="{{ asset('imagenes/opcion1.jpg') }}" alt="">
-          <div class="capa">
-            <h3>PIZZAS</h3>
-            <p>Los buenos momentos son como las pizzas, siempre sabra mejor si compartes con amigos.</p>
-          </div>
-        </figure>
+      <a href="{{url('/PizzaWorld/Receta_Pizzas')}}">
+        <div class="contenedor">
+          <figure>
+            <img src="{{ asset('imagenes/opcion1.jpg') }}" alt="">
+            <div class="capa">
+              <h3>PIZZAS</h3>
+              <p>Los buenos momentos son como las pizzas, siempre sabra mejor si compartes con amigos.</p>
+            </div>
+          </figure>
 
-      </div>
+        </div>
+      </a>
     </div>
     <div class="col">
-      <div class="contenedor">
-        <figure>
-          <img src="{{ asset('imagenes/opcion3.jpg') }}" alt="">
-          <div class="capa">
-            <h3>POSTRES</h3>
-            <p>Cocinar con amor, alimenta el alma <br> y un buen postre endulza tu vida.</p>
-          </div>
-        </figure>
+      <a href="{{url('/PizzaWorld/Receta_Postres')}}">
+        <div class="contenedor">
+          <figure>
+            <img src="{{ asset('imagenes/opcion3.jpg') }}" alt="">
+            <div class="capa">
+              <h3>POSTRES</h3>
+              <p>Cocinar con amor, alimenta el alma <br> y un buen postre endulza tu vida.</p>
+            </div>
+          </figure>
 
-      </div>
+        </div>
+      </a>
     </div>
   </div>
   <br>
@@ -198,12 +203,13 @@
         <div class="col-sm-12">
           <div class="contentSEO">
             <h2>SEO</h2>
-              <img src="{{ asset('imagenes/SEO.jpeg') }}" class="card-img-top" alt="...">
-              <div class="card-body"><hr>
-                <h5>Sergio Alejandro Prieto Molano</h5>
-                <p class="card-text">Creador de World Of Pizza</p>
-              </div>
-            
+            <img src="{{ asset('imagenes/SEO.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <hr>
+              <h5>Sergio Alejandro Prieto Molano</h5>
+              <p class="card-text">Creador de World Of Pizza</p>
+            </div>
+
           </div>
         </div>
       </div>

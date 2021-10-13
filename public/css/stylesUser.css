@@ -280,6 +280,8 @@ list-style: none;
     font-family: serif;
     font-size: 20px;
 }
+
+
 .contentClass{
     display: flex;
     justify-content: space-around;
@@ -384,6 +386,31 @@ list-style: none;
     
 }
 
+.cardNosotros{
+    color: white;
+    max-width: 700rem;
+    background-color: #1A1A1A;
+    border: 1px;
+    
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cardNosotros img{
+    border-radius: 20px;
+    transition: all 500ms ease-out;
+    filter: brightness(70%);
+    cursor: pointer;
+}
+.cardNosotros img:hover{
+    box-shadow: 0px 15px 25px rgba(255, 255, 255, 0.50);
+    transition: 0.7s;
+  
+}
+.ContNosotros{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
 
  /* inicio de FIN DE PAGINA */
 .textFin{
@@ -441,23 +468,64 @@ list-style: none;
     color: rgba(0, 0, 0, 0.815);
 }
 
+/* CONTENIDO DE TODAS LAS RECETAS */
+.ContRecet{
+    
+    /* background-color: white; */
+    
+    background-color: #1A1A1A;
+    max-width: 75rem;
+    padding: 20px;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+}
+.ContRecet hr{
+    color: white;
+}
+.card{
+    /* Sombra */
+    background-color: transparent;
+    border-color: white;
+    border: 1px;
+    border-style: solid;
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+
+}
+.card:hover{
+    /* se nota la sombra mas oscura */
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.6);
+    /* cada tarjeta sube */
+    transform: translateY(-5%);
+}
+
+/* CONTENIDO DE TODAS LAS RECETAS */
+
  /* FIN DE PAGINA */
 
  /* Perfiles */
  .contenedor_Perfil{
-    background-color: rgba(255, 255, 255, 0.644);
-    
+    /* background-color: rgba(255, 255, 255, 0.644); */
+    background-color: #1A1A1A;
+    color: white;
     border-radius: 10px;
+    border: 1px;
+    border-color: white;
+    border-style: solid;
     transition: all 500ms ease-out;
     padding: 10px;
     max-width: 40rem;
  }
  
-.contenedor_Perfil:hover{
-    background-color: rgb(255, 255, 255);
-    transition: 0.4s;
-    
-}
+
 .contenedor_Perfil .iconUser{
     font-size: 100px;
 }
@@ -468,7 +536,7 @@ list-style: none;
     transition: all 500ms ease-out;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.349);
+    border-color: white;
     display: flex;
     flex-direction:column;
 justify-content:center;
@@ -478,17 +546,25 @@ text-align: center;
     
     
 }
-.contenedor_Perfil .infoPerfil:hover{
-    border-width: 1px;
-    border-color: black;
-    
-    transition: 0.7s;
-    
+.cardPerfil{
+    background-color: transparent;
 }
-.btn{
+.cardPerfil img{
+    transition: all 500ms ease-out;
+    cursor: pointer;
+}
+.cardPerfil img:hover{
+    transition: 0.7s;
+        /* se nota la sombra mas oscura */
+        box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.6);
+        /* cada tarjeta sube */
+        transform: translateY(-5%);
+}
+
+.btne{
     border: 3px solid rgba( 100,100,100,0.1);
     margin-bottom: 20px;
-    max-width: 37rem;
+    max-width: 10rem;
     font-family:'Poppins', sans-serif;
     font-size: 16px;
     border-radius: 8px;
@@ -498,7 +574,7 @@ text-align: center;
     transition: 1s;
     width: 760px;
 }
-.btn:hover{
+.btne:hover{
     background-position: right;
 }
 .btn1{
@@ -545,14 +621,29 @@ text-align: center;
     transition: 0.7s;
     opacity: 100%;
 }
-.contentModal{
+
+
+ /* Fin de Perfiles */
+ .cardContactenos{
+     color: white;
+     background-color: #1A1A1A;
+     max-width: 70rem;
+     border-radius: 20px;
+ }
+ 
+ .contentModal{
     margin: 35px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.349);
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: #1A1A1A;
+    width: 900px;
 
 }
-
- /* Fin de Perfiles */
+.modal-content{
+    background-color: transparent;
+    border-style: none;
+  margin-left: -90%;
+    
+}

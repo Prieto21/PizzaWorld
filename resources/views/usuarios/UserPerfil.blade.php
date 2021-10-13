@@ -1,90 +1,235 @@
 @extends('layout.layoutUser')
 @section('contenido')
 <br><br>
+<div class="container-fluid ContNosotros">
+    <h1 class="textPrincipal">Perfil</h1>
+    <div class="container contenedor_Perfil">
+        <center>
+            <div class="cardPerfil mb-3" style="max-width: 540px;">
+                <br>
 
-<h1 class="textPrincipal">Perfil</h1>
-<div class="container contenedor_Perfil">
-    <div class="infoPerfil">
-        <i class="far fa-user iconUser"></i>
-        <hr>
-        <p>Nombre: Oliver Jack James.</p>
-        <p>Edad: 32 Años.</p>
-        <p>Usuario: Pepe_23.</p>
-        <p>Contraseña: 123456 .</p>
-        <p>Correo: Oliver132@gmail.com .</p>
-        <p>Sexo: Hombre.</p>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            MODIFICAR <i class="fas fa-user-edit"></i>
-        </button>
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="{{ asset('imagenes/profile.jfif') }}" class="img-fluid rounded-start" alt="...">
 
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content" style="background-color: rgba(255, 255, 255, 0.900);">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modificar Información <i class="fas fa-id-card"></i></h5>
-                      
-                    </div>
-                    <div class="modal-body contentModal">
-                        <i class="far fa-user iconUser"></i><br><br>
-                        <div class="input-group mb-3" >
-
-                            <input type="file" class="form-control" id="inputGroupFile01">
-                        </div>
                         <hr>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Nombre:</span>
-                            <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" value="Oliver Jack ">
-                        </div>
-                        <br>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Apellidos:</span>
-                            <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" value="James">
-                        </div>
-                        <br>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Edad:</span>
-                            <input type="text" class="form-control" value="32" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div><br>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Usuario</span>
-                            <input type="text" class="form-control" value="Pepe_23" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div><br>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Contraseña:</span>
-                            <input type="text" class="form-control" value="123456" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div><br>
-                        <div class="input-group flex-nowrap">
-                            <span class="input-group-text" id="addon-wrapping">Gmail:</span>
-                            <input type="text" class="form-control" value="Oliver132@gmail.com" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div><br>
-                        <div class="input-group flex-nowrap">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Sexo</option>
-                                <option value="1">Hombre</option>
-                                <option value="2">Mujer</option>
-                                <option value="3">Otro</option>
-                            </select>
-                        </div><br>
-<hr>
-                        <div >
-                        <button type="button" class="btn2" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn3">Modificar</button>
+                        <center>
+                            <h5 class="card-title">Sara Martinez</h5>
+                        </center>
                     </div>
-
-
-
+                    <div class="col-md-1">
                     </div>
-                    
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <center>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h5 class="card-title">Usuario:</h5>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>
+                                            <p class="card-text">
+                                                <center>SaraT21</center>
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <h5 class="card-title">Contraseña:</h5>
+
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <p class="card-text">
+                                                <center>Sara12345M</center>
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="card-title">Gmail:</h5>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <p class="card-text">
+                                                <center>Sara1256Mar@gmail.com</center>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="card-title">Sexo:</h5>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <p class="card-text">
+                                                <center>Mujer</center>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <br>
+                                    <tr>
+                                        <td>
+                                            <h5 class="card-title">Edad:</h5>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <p class="card-text">
+                                                <center>25</center>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+
+
+
+
+
+
+                            <br><br>
+
+
+                            <!-- Button trigger modal -->
+                            <center><button type="button" class="btne btn1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    MODIFICAR <i class="fas fa-user-edit"></i>
+                                </button></center>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+
+                                    <div class="modal-content">
+
+                                        <div class="modal-body contentModal">
+                                            <form>
+                                                <h1>Modificar Información</h1>
+                                                <hr>
+                                                <p>Foto Actual</p>
+                                                <img src="{{ asset('imagenes/profile.jfif') }}" style="max-width: 10rem;padding:2%" > <br>
+                                                <!-- NOMBRE COMPLETO -->
+                                                <div class="row g-2">
+                                                    
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Nombre:</span>
+                                                            <input type="text" class="form-control" value="Sara" aria-label="Username" aria-describedby="basic-addon1" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Apellidos:</span>
+                                                            <input type="text" required class="form-control" value="Martinez" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- USUARIO (imput de dos en dos) -->
+                                                <div class="row g-2">
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Usuario:</span>
+                                                            <input type="text" required class="form-control" value="SaraT21" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Contraseña:</span>
+                                                            <input type="text" required class="form-control" value="Sara12345M" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email y edad -->
+
+                                                <div class="row g-2">
+                                                    <div class="col-md-9">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Correo:</span>
+                                                            <input type="text" required class="form-control" value="Sara1256Mar@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">Edad:</span>
+                                                            <input type="text" required class="form-control" value="25" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Ultimos datos -->
+                                                <div class="row g-2">
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+
+
+                                                            <label for="formFileSm" class="form-label">Foto De Perfil: </label> &nbsp
+                                                            <input required class="form-control form-control-sm" id="formFileSm" type="file">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md">
+                                                        <div class="input-group mb-3">
+
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Sexo</option>
+                                                                <option value="1">Hombre</option>
+                                                                <option value="2">Mujer</option>
+                                                                <option value="3">Otro</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+            
+                                            <hr>
+                                            <div>
+                                                <button type="button" class="btn2" data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn3">Modificar</button>
+                                            </div>
+
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- CIERRE DE MODAL -->
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        </div>
+        </center>
+
+
     </div>
-
+    <br>
 </div>
-<br>
-
 
 
 
