@@ -647,3 +647,35 @@ text-align: center;
   margin-left: -90%;
     
 }
+
+.contenidoClases{
+
+padding: 10px;
+}
+.subContenidoClases{
+    background-color: #1A1A1A;
+padding: 10px;
+display: flex;
+justify-content: center;
+border-radius: 10px;
+
+
+}
+.videoClass{
+    background-color: transparent;
+    padding: 10px;
+    
+}
+.videoClass iframe{
+    height: 550px;
+    width: 60rem;
+}
+.listaClass{
+    background-color: transparent;
+    padding: 10px;
+    height: 35rem;
+}
+.listaClass iframe{
+    height: 150px;
+    width: 15rem;
+}

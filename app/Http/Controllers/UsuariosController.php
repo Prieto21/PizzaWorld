@@ -54,6 +54,11 @@ class UsuariosController extends Controller
         return view('usuarios.Contactenos');
         
     }
+    public function index10()
+    {
+        return view('usuarios.ClasesUser');
+        
+    }
     /**
      * Show the form for creating a new resource.
      *

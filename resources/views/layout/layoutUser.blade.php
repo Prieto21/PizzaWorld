@@ -30,7 +30,7 @@
     <div class="IconoNav"><p>W</p><img src="{{ asset('imagenes/Icono_pagina.png') }}" ><p>P</p></div>
         <a class="text_navbar" href="{{url('/PizzaWorld/User')}}">Inicio <i class="fas fa-home"></i></a>
         <a class="text_navbar" href="{{url('/PizzaWorld/UserFav')}}">Favoritos <i class="fas fa-star"></i></a>
-        <a class="text_navbar" href="#">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/ClasesOnline')}}">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
         <a class="text_navbar" href="#">Loading...<i class="fas fa-tools"></i></a>
 
 
