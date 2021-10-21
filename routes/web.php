@@ -31,6 +31,9 @@ Route::get('/PizzaWorld/registro', function () {
     return view('registro');
 });
 
+
+// Prueba
+
 //PARTE DE USUARIO PARTICULARES
 Route::resource('PizzaWorld/User', 'UsuariosController');
 Route::get('PizzaWorld/UserOut', 'UsuariosController@index2');
