@@ -1,4 +1,4 @@
-@extends('layout.layoutUser')
+@extends('layout.layoutUserComun')
 @section('contenido')
 <br><br>
 <!-- CARRUSEL -->
@@ -58,7 +58,7 @@
   <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-      <a href="{{url('/PizzaWorld/Receta_Bebidas')}}">
+      <a href="{{url('/PizzaWorld/Receta_BebidasCo')}}">
         <div class="contenedor">
           <figure>
             <img src="{{ asset('imagenes/opcion2.jpg') }}" alt="">
@@ -72,7 +72,7 @@
       </a>
     </div>
     <div class="col">
-      <a href="{{url('/PizzaWorld/Receta_Pizzas')}}">
+      <a href="{{url('/PizzaWorld/Receta_PizzasCo')}}">
         <div class="contenedor">
           <figure>
             <img src="{{ asset('imagenes/opcion1.jpg') }}" alt="">
@@ -86,7 +86,7 @@
       </a>
     </div>
     <div class="col">
-      <a href="{{url('/PizzaWorld/Receta_Postres')}}">
+      <a href="{{url('/PizzaWorld/Receta_PostresCo')}}">
         <div class="contenedor">
           <figure>
             <img src="{{ asset('imagenes/opcion3.jpg') }}" alt="">

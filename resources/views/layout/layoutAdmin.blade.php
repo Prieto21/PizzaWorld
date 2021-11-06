@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&display=swap" rel="stylesheet">
 
     <!-- css y java link inicio -->
-    <link rel="stylesheet" href="{{ asset('css/stylesUser.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
     <script src="https://kit.fontawesome.com/2b14a6eef6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- css y java link  fin -->
@@ -28,9 +28,10 @@
 <nav class="navbar navbar-light navbarbg fixed-top">
     <div class="container-fluid">
     <div class="IconoNav"><p>W</p><img src="{{ asset('imagenes/Icono_pagina.png') }}" ><p>P</p></div>
-        <a class="text_navbar" href="{{url('/PizzaWorld/User')}}">Inicio <i class="fas fa-home"></i></a>
-        <a class="text_navbar" href="{{url('/PizzaWorld/UserFav')}}">Favoritos <i class="fas fa-star"></i></a>
-        <a class="text_navbar" href="{{url('/PizzaWorld/ClasesOnline')}}">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/Admin')}}">Panel De Control <i class="fas fa-cogs"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/AdminComunidad')}}">Miembros <i class="fas fa-id-card"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/AdminRecetas')}}">Recetas <i class="fas fa-concierge-bell"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/AdminAddRec')}}">Agregar Receta <i class="fas fa-plus-circle"></i></a>
         
 
 
@@ -61,33 +62,28 @@
 
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Pizzas')}}"><i class="fas fa-pizza-slice"></i>&nbsp Pizzas</a>
+                        <a class="nav-link" href="{{url('/PizzaWorld/AdminClasesOnline')}}">
+                        <i class="fas fa-chalkboard-teacher"></i>&nbsp Clases Online</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Postres')}}"><i class="fas fa-ice-cream"></i>&nbsp Postres </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Bebidas')}}">
-                            <i class="fas fa-cocktail"></i>&nbsp Bebidas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Contactenos')}}">
-                            <i class="fas fa-headset"></i>&nbsp Contáctenos</a>
+                        <a class="nav-link" href="{{url('/PizzaWorld/AdminMensajes')}}">
+                        <i class="fas fa-envelope-open-text"></i>&nbsp Mensajes</a>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="{{url('/PizzaWorld/Nosotros')}}">
+                    <li class="nav-item"><a class="nav-link" href="{{url('/PizzaWorld/AdminNosotros')}}">
                             <i class="fas fa-users"></i>&nbsp Nosotros</a>
                     </li>
 
 
 
                 </ul>
-                <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <hr>
                 <div class="ubicacion">
                     <!-- <a class="textPerfil" href="http://52.14.138.109:81/PizzaWorld/UserPerfil"> -->
-                    <a class="textPerfil" href="{{url('/PizzaWorld/UserPerfil')}}">
+                    <a class="textPerfil" href="{{url('/PizzaWorld/AdminPerfil')}}">
 
                         <i class="far fa-user-circle"></i>
                         Perfil

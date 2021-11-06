@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&display=swap" rel="stylesheet">
 
     <!-- css y java link inicio -->
-    <link rel="stylesheet" href="{{ asset('css/stylesUser.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styleUserComun.css') }}">
     <script src="https://kit.fontawesome.com/2b14a6eef6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- css y java link  fin -->
@@ -28,9 +28,10 @@
 <nav class="navbar navbar-light navbarbg fixed-top">
     <div class="container-fluid">
     <div class="IconoNav"><p>W</p><img src="{{ asset('imagenes/Icono_pagina.png') }}" ><p>P</p></div>
-        <a class="text_navbar" href="{{url('/PizzaWorld/User')}}">Inicio <i class="fas fa-home"></i></a>
-        <a class="text_navbar" href="{{url('/PizzaWorld/UserFav')}}">Favoritos <i class="fas fa-star"></i></a>
-        <a class="text_navbar" href="{{url('/PizzaWorld/ClasesOnline')}}">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/UserCo')}}">Inicio <i class="fas fa-home"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/ContactenosCo')}}">Contactenos <i class="fas fa-headset"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/NosotrosCo')}}">Nosotros <i class="fas fa-users"></i></a>
+        <a class="text_navbar" href="{{url('/PizzaWorld/ClasesOnlineCo')}}">Clases En Línea <i class="fas fa-chalkboard-teacher"></i></a>
         
 
 
@@ -49,12 +50,12 @@
                     <a class="text_navbar" href="{{url('/PizzaWorld/UserOut')}}">
                     <h5 class="offcanvas-title " id="offcanvasNavbarLabel">
                         <i class="fas fa-door-open " style="color: red;"></i>
-                        Cerrar Sesión
+                        Salir
 
                     </h5>
                 </a>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
+                
             </div>
 
             <div class="offcanvas-body " style="background-color: rgba(230, 230, 230, 0.6);">
@@ -62,38 +63,24 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Pizzas')}}"><i class="fas fa-pizza-slice"></i>&nbsp Pizzas</a>
+                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_PizzasCo')}}"><i class="fas fa-pizza-slice"></i>&nbsp Pizzas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Postres')}}"><i class="fas fa-ice-cream"></i>&nbsp Postres </a>
+                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_PostresCo')}}"><i class="fas fa-ice-cream"></i>&nbsp Postres </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_Bebidas')}}">
+                        <a class="nav-link" href="{{url('/PizzaWorld/Receta_BebidasCo')}}">
                             <i class="fas fa-cocktail"></i>&nbsp Bebidas</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/PizzaWorld/Contactenos')}}">
-                            <i class="fas fa-headset"></i>&nbsp Contáctenos</a>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link" href="{{url('/PizzaWorld/Nosotros')}}">
-                            <i class="fas fa-users"></i>&nbsp Nosotros</a>
-                    </li>
+          
 
 
 
                 </ul>
-                <br><br><br><br><br><br><br><br><br><br>
-                <hr>
-                <div class="ubicacion">
-                    <!-- <a class="textPerfil" href="http://52.14.138.109:81/PizzaWorld/UserPerfil"> -->
-                    <a class="textPerfil" href="{{url('/PizzaWorld/UserPerfil')}}">
-
-                        <i class="far fa-user-circle"></i>
-                        Perfil
-                    </a>
-                </div>
-
+                
+                
+           
+<hr>
 
             </div>
         </div>

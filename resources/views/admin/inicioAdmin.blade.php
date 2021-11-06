@@ -1,75 +1,178 @@
-<!doctype html>
-<html lang="en">
+@extends('layout.layoutAdmin')
+@section('contenido')
+<br><br><br>
+<div class="alert" role="alert">
+    <h4 class="alert-heading">¡Bienvenido Jefe!</h4>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    ¡Gran día para trabajar - No olvides revisar las novedades!
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</div>
 
-    <title>Hello, world!</title>
-</head>
 
-<body>
-    <center>
-       <div class="row">
-           <div class="col-sm-11">
-           <h1>inicio admin </h1>
-        
-           </div>
-           <div class="col-sm-1">
-           <a href="http://localhost:8000/PizzaWorld/UserOut">
-                <button>
-                    Cerrar
-                </button>
+<div class="container" style="max-width: 90%;">
+
+    <div class="contorno">
+        <h1 class="textPrincipal">Panel De Control</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <a href="{{url('/PizzaWorld/AdminComunidad')}}">
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/Comunidad.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard">MIEMBROS</h5>
+                    </div>
+                </div>
+            </div>
             </a>
-           </div>
-       </div>
-    </center>
-    <hr>
-    <center>
-    <div class="row">
-        <div class="col-sm-3">
-            <a href="http://localhost:8000/PizzaWorld/AdminPerfil">
-                <button>
-                    Perfil
-                </button>
+            <a href="{{url('/PizzaWorld/AdminRecetas')}}">
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/Recetas.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard">RECETAS</h5>
+                    </div>
+                </div>
+            </div>
             </a>
+            <a href="{{url('/PizzaWorld/AdminAddRec')}}">
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/AgregarReceta.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard">NUEVAS RECETAS</h5>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="{{url('/PizzaWorld/AdminMensajes')}}">
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/Mensajeria.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard-mensajes">MENSAJERÍA</h5>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="{{url('/PizzaWorld/AdminPerfil')}}">
+            <div class="col">
+
+
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/PerfilAdmin.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard">PERFIL</h5>
+                    </div>
+                </div>
+            </div></a>
+
+            <a href="{{url('/PizzaWorld/AdminNosotros')}}">
+            <div class="col">
+
+
+                <div class="card bg-dark text-white">
+                    <img src="{{ asset('imagenes/Nosotros.jpeg') }}" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                        <hr>
+                        <h5 class="titulocard">NOSOTROS</h5>
+                    </div>
+                </div>
+            </div></a>
+
+
+
         </div>
-        <div class="col-sm-3">
-            <a href="http://localhost:8000/PizzaWorld/AdminComunidad">
-                <button>
-                    Miembros
-                </button>
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a href="http://localhost:8000/PizzaWorld/AdminRecetas">
-                <button>
-                    Recetas
-                </button>
-            </a>
-        </div>
-        <div class="col-sm-3">
+        <br>
+        <div class="col">
 
-            <a href="http://localhost:8000/PizzaWorld/AdminAddRec">
-                <button>
-                    Agregar Recetas
-                </button>
-            </a>
+            <div class="contenidoListUser">
+                <center>
+                    <h5 class="titulocard">NUEVOS USUARIOS</h5>
+                </center>
+                <hr>
+                <div class="overflow-auto largotabla">
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <hr>
+                <b>
+                    <h6>Top de los 10 usuarios más recientes</h6>
+                </b>
+
+            </div>
         </div>
     </div>
-    </center>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
--->
-</body>
-
-</html>
+</div>
+<br>
+@endsection

@@ -33,9 +33,14 @@
                 
             </form>
             
+            <div class="contlogin">
             <a class="link_registro" href="{{url('/PizzaWorld/registro')}}">
                 ¿No Tienes Cuenta?
             </a>
+            <a class="link_registro" href="{{url('/PizzaWorld/UserCo')}}">
+                Ingresar Sin Cuenta
+            </a>
+            </div>
         </div>
         
 
