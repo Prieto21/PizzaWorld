@@ -997,9 +997,41 @@ button {
     border-radius: 0.2%;
 }
 .buttonsRecetas{
-    display: flex;
-    justify-content: space-around;
+   max-height:150px;
+   padding: 10%;
+   /* overflow: auto; */
+   
+   
+   /* vertical-align:super; */
 }
+/* OVER FLOW */
+.cardrecet-admin{
+    max-height:500px;
+    overflow: auto;
+}
+.cardrecet-admin::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.cardrecet-admin::-webkit-scrollbar:vertical {
+    width:5px;
+}
+
+.cardrecet-admin::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.cardrecet-admin::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+.cardrecet-admin::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 1px solid #f1f2f3;
+}
+
+/* OVER FLOW */
+
+
 .contenedor-mensajes{
     background-color: rgba(0, 0, 0, 0.719);
     

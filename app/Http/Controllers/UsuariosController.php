@@ -3,18 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\usuarios;
+use App\Models\favoritos;
 use Illuminate\Http\Request;
-/**
- * <Class UsuariosController>
- * <Class En esta clase se maneja todo lo que tiene que ver con la parte del ususario en particular del proyecto>
- * 
- * @author 	<Sergio Alejandro Prieto Molano // sergio_prietomo@fet.edu.co>
- * @since 		<22/sep/2021>
- * 
- * All Rigths Reserved.
- * Consensus Corporation. 
- *
- */
+use Illuminate\Support\Facades\DB;
 
 class UsuariosController extends Controller
 {
@@ -23,63 +14,95 @@ class UsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    //Esta funcion le muestra al ususario la pagina de inicio de world of pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA PRINCIPAL A LOS USUARIO QUE SON MIEMBROS DE WOP
     public function index()
     {
         return view('usuarios.inicioUser');
     }
-
-    //Esta funcion hace un redirect, donde le muestra al ususario la pagina de inicio de world of pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA PRINCIPAL DE WOP CUANDO SE SOLO SE COLOCA LA IP
     public function index2()
     {
         return redirect('/PizzaWorld');
-
     }
-
-    //Esta funcion le muestra al ususario su perfil con su respectiva informacion 
+    // ESTA FUNCION LE MUESTRA LA VISTA DEL PERFIL A LOS USUARIO QUE SON MIEMBROS DE WOP, CON SU RESPECTIVA CONSULTA DESDE LA DB
     public function index3()
     {
-        return view('usuarios.UserPerfil');
+        $perfilUser = DB::table('usuarios')
+        
+        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres','usuarios.id','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo')
+        ->where('usuarios.id', '=', '5')
+        // ->where('usuarios.id_sexo', '=', '3') 
+        ->get();
+        return view('usuarios.UserPerfil', compact('perfilUser'));
     }
-
-    //Esta funcion le muestra al ususario la pagina de inicio de world of pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA FAVORITOS A LOS USUARIO QUE SON MIEMBROS DE WOP, CON SU RESPECTIVA CONSULTA DESDE LA DB
     public function index4()
     {
-        return view('usuarios.UserFavoritos');
+        $InfoFavoritos = DB::table('favoritos')
+        
+        ->join('usuarios', 'usuarios.id', '=', 'favoritos.id_usuario' )
+        ->join('recetas', 'recetas.id', '=', 'favoritos.id_receta' )
+        ->select('*', 'favoritos.id as id_favorito')
+        ->where('usuarios.id', '=', '5')
+        // ->where('usuarios.id_sexo', '=', '3') 
+        ->get();
+        return view('usuarios.UserFavoritos', compact('InfoFavoritos'));
         
     }
-    //Esta funcion le muestra al ususario la receta de tipo pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA RECETAS DE PIZZA A LOS USUARIO QUE SON MIEMBROS DE WOP, CON SU RESPECTIVA CONSULTA DESDE LA DB
     public function index5()
     {
-        return view('usuarios.RecetPizzas');
+        $pizzas = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','recetas.id','tiporecetas.tipo')
+        
+        ->where('recetas.id_receta', '=', '1') 
+        ->get();
+        return view('usuarios.RecetPizzas', compact('pizzas'));
         
     }
-    //Esta funcion le muestra al ususario la receta de tipo bebidas
+    // ESTA FUNCION LE MUESTRA LA VISTA RECETAS DE BEBIDAS A LOS USUARIO QUE SON MIEMBROS DE WOP, CON SU RESPECTIVA CONSULTA DESDE LA DB
     public function index6()
     {
-        return view('usuarios.RecetBebidas');
+        $bebidas = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','recetas.id','tiporecetas.tipo')
+        
+        ->where('recetas.id_receta', '=', '2') 
+        ->get();
+        
+        return view('usuarios.RecetBebidas', compact('bebidas'));
         
     }
-    //Esta funcion le muestra al ususario la receta de tipo postres
+    // ESTA FUNCION LE MUESTRA LA VISTA RECETAS DE POSTRES A LOS USUARIO QUE SON MIEMBROS DE WOP, CON SU RESPECTIVA CONSULTA DESDE LA DB
     public function index7()
     {
-        return view('usuarios.RecetPostres');
+        $postres = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','recetas.id','tiporecetas.tipo')
+        
+        ->where('recetas.id_receta', '=', '3') 
+        ->get();
+        return view('usuarios.RecetPostres', compact('postres'));
         
     }
-    //Esta funcion le muestra al ususario la informacion de que es world of pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA NOSOTROS A LOS USUARIO QUE SON MIEMBROS DE WOP
     public function index8()
     {
         return view('usuarios.NosotrosUser');
         
     }
-    //Esta funcion le muestra al ususario una pagina para que se comunique con world of pizza
+    // ESTA FUNCION LE MUESTRA LA VISTA CONTACTENOS A LOS USUARIO QUE SON MIEMBROS DE WOP
     public function index9()
     {
         return view('usuarios.Contactenos');
         
     }
-    //Esta funcion le muestra al ususario las clases en linea de la plataforma
+    // ESTA FUNCION LE MUESTRA LA VISTA CLASES ONLINE A LOS USUARIO QUE SON MIEMBROS DE WOP
     public function index10()
     {
         return view('usuarios.ClasesUser');
@@ -90,7 +113,6 @@ class UsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Crear)
     public function create()
     {
         //
@@ -102,11 +124,18 @@ class UsuariosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... ()
-    
+    // FUNCION PARA AGREGAR NUEVOS USUARIOS A WOP
     public function store(Request $request)
     {
-        //
+        usuarios::create($request->all());
+        return redirect()->route('User.index');
+    }
+    // FUNCION PARA AGREGAR PIZZAS A FAVORITOS
+    public function store1(Request $request)
+    {
+        favoritos::create($request->all());
+        // return redirect('/PizzaWorld/UserFav');
+        return back();
     }
 
     /**
@@ -115,7 +144,6 @@ class UsuariosController extends Controller
      * @param  \App\Models\usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Mostrar)
     public function show(usuarios $usuarios)
     {
         //
@@ -127,7 +155,6 @@ class UsuariosController extends Controller
      * @param  \App\Models\usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Editar)
     public function edit(usuarios $usuarios)
     {
         //
@@ -140,10 +167,12 @@ class UsuariosController extends Controller
      * @param  \App\Models\usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Actualizar)
-    public function update(Request $request, usuarios $usuarios)
+    // ESTA FUNCION LE PERMITE A LOS USUARIOS DE WOP ACTUALIZAR LOS DATOS
+    public function update(Request $request, $id)
     {
-        //
+        $datosUsuarios = $request->except(['_token','_method']);
+        usuarios::where(['id'=>$id])->update($datosUsuarios);
+        return back();
     }
 
     /**
@@ -152,9 +181,10 @@ class UsuariosController extends Controller
      * @param  \App\Models\usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Eliminar)
-    public function destroy(usuarios $usuarios)
+    // ESTA FUNCION LE PERMITE AL USUARIO ELIMINAR LAS RECETAS QUE NO QUIERE EN FAVORITOS
+    public function destroy($id)
     {
-        //
+        favoritos::destroy($id);
+        return back();
     }
 }

@@ -34,7 +34,7 @@ Route::get('/PizzaWorld/registro', function () {
 
 // Prueba
 
-//PARTE DE USUARIO PARTICULARES
+//PARTE DE USUARIO MIEMBROS
 Route::resource('PizzaWorld/User', 'UsuariosController');
 Route::get('PizzaWorld/UserOut', 'UsuariosController@index2');
 Route::get('PizzaWorld/UserPerfil', 'UsuariosController@index3');
@@ -45,6 +45,7 @@ Route::get('PizzaWorld/Receta_Postres', 'UsuariosController@index7');
 Route::get('PizzaWorld/Nosotros', 'UsuariosController@index8');
 Route::get('PizzaWorld/Contactenos', 'UsuariosController@index9');
 Route::get('PizzaWorld/ClasesOnline', 'UsuariosController@index10');
+Route::post('PizzaWorld/Favorites', 'UsuariosController@store1');
 
 //PARTE DE USUARIO MIEMBROS
 Route::resource('PizzaWorld/UserCo', 'RecetasController');
@@ -60,7 +61,7 @@ Route::get('/PizzaWorld/ContactenosCo', function () {
 Route::get('/PizzaWorld/ClasesOnlineCo', function () {
     return view('usuariosComun.ClasesUserCo');
 });
-
+ 
 //PARTE DE ADMIN PARTICULARES
 Route::resource('PizzaWorld/Admin', 'AdministradorController');
 Route::get('PizzaWorld/AdminPerfil', 'AdministradorController@index2');
@@ -70,4 +71,5 @@ Route::get('PizzaWorld/AdminAddRec', 'AdministradorController@index5');
 Route::get('PizzaWorld/AdminClasesOnline', 'AdministradorController@index6');
 Route::get('PizzaWorld/AdminNosotros', 'AdministradorController@index7');
 Route::get('PizzaWorld/AdminMensajes', 'AdministradorController@index8');
+Route::get('PizzaWorld/DeleteRecet/{id?}', 'AdministradorController@destroy1');
 

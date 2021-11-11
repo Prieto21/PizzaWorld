@@ -7,7 +7,8 @@
        
         <div class="contenedorlogin">
             
-            <form >
+            <form action="{{route('User.index')}}" method="POST">
+            <!-- @csrf -->
             <h1>Login</h1>
             <hr><br>
                 <!-- USUARIO -->

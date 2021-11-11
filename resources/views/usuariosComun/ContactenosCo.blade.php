@@ -21,24 +21,24 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" style="display: flex; justify-content:flex-start;" class="form-label">Nombres Y Apellidos</label>
-                                <input type="text" class="form-control" placeholder="Ingrese su nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" placeholder="Ingrese su nombre" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                                 
                             </div>
                             <br>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" style="display: flex; justify-content:flex-start;" class="form-label">Gmail</label>
-                                <input type="text" class="form-control" placeholder="Ingrese su correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" placeholder="Ingrese su correo" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                                 
                             </div>
                             <br>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" style="display: flex; justify-content:flex-start;" class="form-label">Mensaje</label>
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Comentanos..."></textarea>
+                                <textarea class="form-control" aria-label="With textarea" placeholder="Comentanos..." required></textarea>
                                 
                             </div>
                             <br>
                             
-                            <button type="button" class="btn btn-outline-warning" style="width: 20rem;">Enviar</button>
+                            <button type="submit" class="btn btn-outline-warning" style="width: 20rem;">Enviar</button>
                             <br><br><br><br><br><br><br><hr>
                             
                             <h6 class="card-title" style="display: flex; justify-content:flex-start;">¡Gracias Por Tu Mensaje!</h6>

@@ -5,16 +5,17 @@
     <h1 class="textPrincipal">Perfil</h1>
     <div class="container contenedor_Perfil">
         <center>
+        @foreach($perfilAdmin as $info )
             <div class="cardPerfil mb-3" style="max-width: 540px;">
                 <br>
 
                 <div class="row g-0">
                     <div class="col-md-5">
-                        <img src="{{ asset('imagenes/SEO.jpeg') }}" class="img-fluid rounded-start" alt="...">
+                        <img src="/imagenes/{{$info->foto}}" class="img-fluid rounded-start" alt="...">
 
                         <hr>
                         <center>
-                            <h5 class="card-title">Sergio Alejandro Prieto Molano</h5>
+                            <h5 class="card-title">{{$info->nombres}} {{$info->apellidos}}</h5>
                         </center>
                     </div>
                     <div class="col-md-1">
@@ -34,7 +35,7 @@
 
                                         <td>
                                             <p class="card-text">
-                                                <center>Prieto21</center>
+                                                <center>{{$info->user}}</center>
                                             </p>
                                         </td>
 
@@ -52,7 +53,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>Admin1234</center>
+                                                <center>{{$info->contra}}</center>
                                             </p>
                                         </td>
 
@@ -67,7 +68,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>sergio_prietomo@fet.edu.co</center>
+                                                <center>{{$info->email}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -81,7 +82,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>Hombre</center>
+                                                <center>{{$info->sexo}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -96,7 +97,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>20</center>
+                                                <center>{{$info->edad}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -112,37 +113,39 @@
 
 
                             <!-- Button trigger modal -->
-                            <center><button type="button" class="btne btn1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <center><button type="button" class="btne btn1" data-bs-toggle="modal" data-bs-target="#infoAdmin{{$info->id}}">
                                     MODIFICAR <i class="fas fa-user-edit"></i>
                                 </button></center>
 
 
                             <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal fade" id="infoAdmin{{$info->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">
 
                                     <div class="modal-content">
 
-                                        <div class="modal-body contentModal">
-                                            <form>
+                                        <div class="modal-body contentModal" style="max-width: 50rem; max-height:47rem;transform: translateX(10%);">
+                                        <form action="{{route('User.update',$info->id)}}" method="POST">
+                                                @csrf
+                                                @method('PUT')
                                                 <h1>Modificar Información</h1>
                                                 <hr>
                                               
                                                 <div class="row g-0">
                                                     <div class="col-md-5">
                                                         <p>Foto Actual</p>
-                                                        <img src="{{ asset('imagenes/SEO.jpeg') }}" style="max-width: 10rem;padding:2%">
+                                                        <img src="/imagenes/{{$info->foto}}"  style="max-width: 10rem;padding:2%">
                                                         <hr>
                                                         <div style="display: flex; justify-content:center;">
-                                                            <p>Cargar Nueva Foto: "</p> <input type="file" class="form-control" id="inputGroupFile01" style="max-width:6rem;max-height:2px; margin-top: 1.5%;">
+                                                            <p>Cargar Nueva Foto: "</p> <input type="file" name="foto" required class="form-control" id="inputGroupFile01" style="max-width:6rem;max-height:2px; margin-top: 1.5%;">
                                                             <p>"</p>
                                                         </div>
 
                                                         <center>
 
                                                             <div style="display: flex; justify-content:center;">
-                                                                <input type="text" class="form-control" value="Sergio Alejandro">&nbsp
-                                                                <input type="text" class="form-control" value="Prieto Molano">
+                                                                <input type="text" class="form-control" name="nombres" value="{{$info->nombres}} ">&nbsp
+                                                                <input type="text" class="form-control" name="apellidos" value="{{$info->apellidos}}">
                                                             </div>
                                                         </center>
                                                     </div>
@@ -164,7 +167,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="Prieto21">
+                                                                                <input type="text" class="form-control" name="user" value="{{$info->user}}">
                                                                             </p>
                                                                         </td>
 
@@ -187,7 +190,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="Admin1234">
+                                                                                <input type="text" class="form-control" name="contra" value="{{$info->contra}}">
                                                                             </p>
                                                                         </td>
 
@@ -208,7 +211,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="sergio_prietomo@fet.edu.co">
+                                                                                <input type="text" class="form-control" name="email" value="{{$info->email}}">
                                                                             </p>
                                                                         </td>
                                                                     </tr>
@@ -227,10 +230,10 @@
                                                                         <td></td>
                                                                         <td>
                                                                             <p class="card-text">
-                                                                                <select class="form-select" aria-label="Default select example">
-                                                                                    <option selected>Sexo</option>
-                                                                                    <option value="1">Hombre</option>
-                                                                                    <option value="2">Mujer</option>
+                                                                                <select class="form-select" name="id_sexo" aria-label="Default select example">
+                                                                                    <option hidden selected>{{$info->sexo}}</option>
+                                                                                    <option value="2">Hombre</option>
+                                                                                    <option value="1">Mujer</option>
                                                                                     <option value="3">Otro</option>
                                                                                 </select>
                                                                             </p>
@@ -252,7 +255,8 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="20">
+                                                                                <input type="text" class="form-control" name="edad" value="{{$info->edad}}">
+                                                                                <input type="text" class="form-control" name="id_rol" value="{{$info->id_rol}}" hidden>
                                                                             </p>
                                                                         </td>
                                                                     </tr>
@@ -261,7 +265,7 @@
                                                             <br><br>
                                                             <div>
                                                                 <button type="button" class="btn2" data-bs-dismiss="modal">Cerrar</button>
-                                                                <button type="button" class="btn3">Modificar</button>
+                                                                <button type="submit" class="btn3">Modificar</button>
                                                             </div>
 
                                                         </div>
@@ -286,6 +290,7 @@
                 </div>
 
             </div>
+            @endforeach
         </center>
 
 

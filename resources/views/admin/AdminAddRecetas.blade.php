@@ -15,30 +15,33 @@
                         <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
                     </svg>
                 </div>
-                <form action="#" method="post" id="contact_form">
+                
+                
+                <form action="{{route('Admin.store')}}" method="POST">
+                        @csrf
                     <div class="name">
                         <label for="name"></label>
-                        <input type="text" placeholder="Nombre De La Receta" name="name" id="name_input" required>
+                        <input type="text" placeholder="Nombre De La Receta" name="receta" id="name_input" required>
                     </div>
                     <div class="file-select" id="src-file1">
-                        <input type="file" name="src-file1" aria-label="Archivo">
+                        <input type="file" name="foto" aria-label="Archivo" required>
                     </div>
 
                     <div class="subject">
                         <label for="subject"></label>
-                        <select placeholder="Subject line" name="subject" id="subject_input" required>
+                        <select placeholder="Subject line" name="id_receta" id="subject_input" required>
                             <option disabled hidden selected>Tipo de receta</option>
-                            <option>Pizzas</option>
-                            <option>Bebidas</option>
-                            <option>Postres</option>
+                            <option value="1" >Pizzas</option>
+                            <option value="2" >Bebidas</option>
+                            <option value="3" >Postres</option>
                         </select>
                     </div>
                     <div class="message">
                         <label for="message"></label>
-                        <textarea name="message" placeholder="Descripción" id="message_input" cols="30" rows="5" required></textarea>
+                        <textarea name="descripcion" placeholder="Descripción" id="message_input" cols="30" rows="5" required></textarea>
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-outline-light">CREAR</button>
+                        <button type="submit" class="btn btn-outline-light">CREAR</button>
                     </div>
                 </form><!-- // End form -->
             </div><!-- // End #container -->

@@ -7,7 +7,8 @@
 
         <div class="contenedorlogin">
 
-            <form>
+        <form action="{{route('User.store')}}" method="POST">
+                        @csrf
                 <h1>Registro</h1>
                 <hr><br>
                 <!-- NOMBRE COMPLETO -->
@@ -15,13 +16,13 @@
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <input type="text"  class="form-control" placeholder="Nombres" aria-label="Username" aria-describedby="basic-addon1" required>
+                            <input type="text"  name="nombres" class="form-control" placeholder="Nombres" aria-label="Username" aria-describedby="basic-addon1" required>
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <input type="text" required class="form-control" placeholder="Apellidos" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" required name="apellidos" class="form-control" placeholder="Apellidos" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -31,13 +32,13 @@
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <input type="text" required class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" name="user" required class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <input type="password" required class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="password" name="contra" required class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -48,13 +49,13 @@
                     <div class="col-md-9">
                         <div class="input-group mb-3">
 
-                            <input type="text" required class="form-control" placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text"  name="email" required class="form-control" placeholder="Correo Electronico" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="input-group mb-3">
 
-                            <input type="text" required class="form-control" placeholder="Edad" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" name="edad" required class="form-control" placeholder="Edad" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -66,16 +67,17 @@
 
 
                             <label for="formFileSm" class="form-label">Foto De Perfil</label> &nbsp
-                            <input required class="form-control form-control-sm" id="formFileSm" type="file">
+                            <input required name="foto" class="form-control form-control-sm" id="formFileSm" type="file">
+                            <input name="id_rol" value="2" hidden>
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="input-group mb-3">
 
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Sexo</option>
-                                <option value="1">Hombre</option>
-                                <option value="2">Mujer</option>
+                            <select class="form-select" name="id_sexo" aria-label="Default select example">
+                                <option value="3" selected>Sexo</option>
+                                <option value="2">Hombre</option>
+                                <option value="1">Mujer</option>
                                 <option value="3">Otro</option>
                             </select>
                         </div>
@@ -93,9 +95,9 @@
                 
                 
                 
-                <a href="{{url('/PizzaWorld/User')}}">
-                    <button type="button" class="btn btn1 ">Crear</button>
-                </a>
+                <!-- <a href="{{url('/PizzaWorld/User')}}"> -->
+                    <button type="submit" class="btn btn1 ">Crear</button>
+                <!-- </a> -->
 
             </form>
             

@@ -5,16 +5,17 @@
     <h1 class="textPrincipal">Perfil</h1>
     <div class="container contenedor_Perfil">
         <center>
+        @foreach($perfilUser as $info )
             <div class="cardPerfil mb-3" style="max-width: 540px;">
                 <br>
 
                 <div class="row g-0">
                     <div class="col-md-5">
-                        <img src="{{ asset('imagenes/profile.jfif') }}" class="img-fluid rounded-start" alt="...">
+                        <img src="/imagenes/{{$info->foto}}" class="img-fluid rounded-start" alt="...">
 
                         <hr>
                         <center>
-                            <h5 class="card-title">Sara Martinez</h5>
+                            <h5 class="card-title">{{$info->nombres}} {{$info->apellidos}}</h5>
                         </center>
                     </div>
                     <div class="col-md-1">
@@ -34,7 +35,7 @@
 
                                         <td>
                                             <p class="card-text">
-                                                <center>SaraT21</center>
+                                                <center>{{$info->user}}</center>
                                             </p>
                                         </td>
 
@@ -52,7 +53,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>Sara12345M</center>
+                                                <center>{{$info->contra}}</center>
                                             </p>
                                         </td>
 
@@ -67,7 +68,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>Sara1256Mar@gmail.com</center>
+                                                <center>{{$info->email}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -81,7 +82,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>Mujer</center>
+                                                <center>{{$info->sexo}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -96,7 +97,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>25</center>
+                                                <center>{{$info->edad}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -112,37 +113,39 @@
 
 
                             <!-- Button trigger modal -->
-                            <center><button type="button" class="btne btn1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <center><button type="button" class="btne btn1" data-bs-toggle="modal" data-bs-target="#infoUser{{$info->id}}">
                                     MODIFICAR <i class="fas fa-user-edit"></i>
                                 </button></center>
 
 
                             <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal fade" id="infoUser{{$info->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">
 
                                     <div class="modal-content">
 
                                         <div class="modal-body contentModal">
-                                            <form>
+                                        <form action="{{route('User.update',$info->id)}}" method="POST">
+                                                @csrf
+                                                @method('PUT')
                                                 <h1>Modificar Información</h1>
                                                 <hr>
                                               
                                                 <div class="row g-0">
                                                     <div class="col-md-5">
                                                         <p>Foto Actual</p>
-                                                        <img src="{{ asset('imagenes/profile.jfif') }}" style="max-width: 10rem;padding:2%">
+                                                        <img src="/imagenes/{{$info->foto}}" style="max-width: 10rem;padding:2%">
                                                         <hr>
                                                         <div style="display: flex; justify-content:center;">
-                                                            <p>Cargar Nueva Foto: "</p> <input type="file" class="form-control" id="inputGroupFile01" style="max-width:6rem;max-height:2px; margin-top: 1.5%;">
+                                                            <p>Cargar Nueva Foto: "</p> <input type="file" value="{{$info->foto}}" required name="foto" class="form-control" id="inputGroupFile01" style="max-width:6rem;max-height:2px; margin-top: 1.5%;">
                                                             <p>"</p>
                                                         </div>
 
                                                         <center>
 
                                                             <div style="display: flex; justify-content:center;">
-                                                                <input type="text" class="form-control" value="Sara">&nbsp
-                                                                <input type="text" class="form-control" value="Martinez">
+                                                                <input type="text" class="form-control" name="nombres" value="{{$info->nombres}}" required>&nbsp
+                                                                <input type="text" class="form-control" name="apellidos" value="{{$info->apellidos}}" required>
                                                             </div>
                                                         </center>
                                                     </div>
@@ -164,7 +167,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="SaraT21">
+                                                                                <input type="text" class="form-control" name="user" value="{{$info->user}}" required>
                                                                             </p>
                                                                         </td>
 
@@ -187,7 +190,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="Sara12345M">
+                                                                                <input type="text" class="form-control" name="contra" value="{{$info->contra}}" required>
                                                                             </p>
                                                                         </td>
 
@@ -208,7 +211,7 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="Sara1256Mar@gmail.com">
+                                                                                <input type="text" class="form-control" name="email" value="{{$info->email}}" required>
                                                                             </p>
                                                                         </td>
                                                                     </tr>
@@ -227,10 +230,10 @@
                                                                         <td></td>
                                                                         <td>
                                                                             <p class="card-text">
-                                                                                <select class="form-select" aria-label="Default select example">
-                                                                                    <option selected>Sexo</option>
-                                                                                    <option value="1">Hombre</option>
-                                                                                    <option value="2">Mujer</option>
+                                                                                <select class="form-select" name="id_sexo" aria-label="Default select example" required>
+                                                                                    <option hidden selected> {{$info->sexo}}</option>
+                                                                                    <option value="2">Hombre</option>
+                                                                                    <option value="1">Mujer</option>
                                                                                     <option value="3">Otro</option>
                                                                                 </select>
                                                                             </p>
@@ -252,7 +255,9 @@
                                                                         <td>
                                                                             <p class="card-text">
 
-                                                                                <input type="text" class="form-control" value="25">
+                                                                                <input type="text" class="form-control" name="edad" value="{{$info->edad}}" required>
+                                                                                <input type="text" name="id_rol" value="2" hidden>
+                                                                                
                                                                             </p>
                                                                         </td>
                                                                     </tr>
@@ -261,7 +266,7 @@
                                                             <br><br>
                                                             <div>
                                                                 <button type="button" class="btn2" data-bs-dismiss="modal">Cerrar</button>
-                                                                <button type="button" class="btn3">Modificar</button>
+                                                                <button type="submit" class="btn3">Modificar</button>
                                                             </div>
 
                                                         </div>
@@ -286,6 +291,7 @@
                 </div>
 
             </div>
+            @endforeach
         </center>
 
 

@@ -3,20 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\administrador;
+use App\Models\recetas;
+use App\Models\usuarios;
 use Illuminate\Http\Request;
-
-/**
- * <Class AdministradorController>
- * <Class En esta clase se maneja todo lo que tiene que ver con la parte administrativa del proyecto>
- * 
- * @author 	<Sergio Alejandro Prieto Molano // sergio_prietomo@fet.edu.co>
- * @since 		<22/sep/2021>
- * 
- * All Rigths Reserved.
- * Consensus Corporation. 
- *
- */
-
+use Illuminate\Support\Facades\DB;
 
 class AdministradorController extends Controller
 {
@@ -25,44 +15,91 @@ class AdministradorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    // Esta funcion mostrara al usuario (Administrador), su pagina de inicio
+    // ESTA FUNCION SE ENCARGA DE MOSTRAR LA VISTA PRINCIPAL DEL ADMINISTRADOR, DONDE A SU VES SE CREA UNA CONSULTA SELECTIVA DE 10 PERSONAS DONDE SU ROL ES DE USUARIOS QUE SON MIEMBROS
+    // EN UN ORDEN DESENDENTE
     public function index()
     {
-        return view('admin.inicioAdmin');
+        $NuevosUser = DB::table('usuarios')
+        
+        ->select('usuarios.nombres','usuarios.apellidos','usuarios.foto', 'usuarios.created_at as fecha')
+        ->where('usuarios.id_rol', '=', '2')
+        ->orderBy('usuarios.id', 'DESC')
+        ->limit('5')
+        ->get();
+        
+        return view('admin.inicioAdmin', compact('NuevosUser'));
     }
-
-    // Esta funcion mostrara al Administrador una pagina donde vera su perfil con su respectiva informacion
+    // ESTA FUNCION SE ENCARGA DE MOSTRAR LA INFORMACION DEL ADMNINISTRADOR, ATRAVES DE UNA CONSULTA CON SUS RESPECTIVAS CONDICIONES
     public function index2()
     {
-        return view('admin.AdminPerfil');
+        $perfilAdmin = DB::table('usuarios')
+        ->join('roles', 'roles.id', '=', 'usuarios.id_rol')
+        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres','usuarios.id','usuarios.id_rol','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo', 'roles.rol')
+        ->where('usuarios.id_rol', '=', '1')
+        // ->where('usuarios.id_sexo', '=', '3') 
+        ->get();
+        return view('admin.AdminPerfil', compact('perfilAdmin'));
     }
-
-    // Esta funcion mostrara al Administrador una pagina donde vera lo miembros 
+    // ESTA FUNCION MUESTRA LA VISTA DE LOS USUARIOS QUE SON PARTE DE WOP, DONDE TIENE SU RESPECTIVA CONSULTA CON SUS CONDICIONES
     public function index3()
     {
-        return view('admin.AdminMiembros');
+        $comunidad = DB::table('usuarios')
+        ->join('roles', 'roles.id', '=', 'usuarios.id_rol')
+        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres', 'usuarios.id','usuarios.id_rol','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo', 'roles.rol')
+        ->where('usuarios.id_rol', '=', '2')
+        // ->where('usuarios.id_sexo', '=', '3') 
+        ->get();
+        
+        
+        // $comunidad = usuarios::all();
+        return view('admin.AdminMiembros', compact('comunidad'));
     }
-
-    // Esta funcion mostrara al Administrador una pagina donde vera todas las recetas creadas 
+    // ESTA FUNCION MUESTRA EN UN VISTA LOS TRES TIPOS DE RECETAS, CADA UNA SE ENVIA POR DIFERENTE VARIABLES, CON SUS RESPECTIVAS CONSULTAS
     public function index4()
     {
-        return view('admin.AdminRecetas');
+        $pizzas = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','tiporecetas.tipo', 'recetas.id')
+        
+        ->where('recetas.id_receta', '=', '1') 
+        ->get();
+        $bebidas = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','tiporecetas.tipo', 'recetas.id')
+        
+        ->where('recetas.id_receta', '=', '2') 
+        ->get();
+        $postres = DB::table('recetas')
+        ->join('tiporecetas', 'tiporecetas.id', '=', 'recetas.id_receta')
+        
+        ->select('recetas.receta','recetas.descripcion','recetas.foto','recetas.id_receta','tiporecetas.tipo', 'recetas.id')
+        
+        ->where('recetas.id_receta', '=', '3') 
+        ->get();
+        
+        return view('admin.AdminRecetas', compact('bebidas', 'pizzas', 'postres'));
     }
 
-    // Esta funcion mostrara al Administrador una pagina donde podra agregar las nuevas recetas
+    // ESTA FUNCION LE MUESTRA LA VISTA DE AGREGAR NUEVAS RECETAS AL ADMIN
     public function index5()
     {
         return view('admin.AdminAddRecetas');
     }
+    // ESTA FUNCION LE MUESTRA LA VISTA DE CLASES ONLINE AL ADMIN
     public function index6()
     {
         return view('admin.AdminClases');
     }
+    // ESTA FUNCION LE MUESTRA LA VISTA DE NOSOTROS DE WOP AL ADMIN
     public function index7()
     {
         return view('admin.AdminNosotros');
     }
+    // ETAS FUNCION LE MUESTRA LA VISTA DE MENSAJERIA DE WOP AL ADMIN
     public function index8()
     {
         return view('admin.AdminMensajes');
@@ -73,7 +110,6 @@ class AdministradorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Crear)
     public function create()
     {
         //
@@ -85,10 +121,14 @@ class AdministradorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... ()
+    
+    //ESTA FUNCION PERMITE AL ADMIN CREAR NUEVAS RECETAS
+
     public function store(Request $request)
     {
-        //
+        recetas::create($request->all());
+        // return redirect('/PizzaWorld/UserFav');
+        return back();
     }
 
     /**
@@ -97,7 +137,6 @@ class AdministradorController extends Controller
      * @param  \App\Models\administrador  $administrador
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Mostrar)
     public function show(administrador $administrador)
     {
         //
@@ -109,7 +148,6 @@ class AdministradorController extends Controller
      * @param  \App\Models\administrador  $administrador
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Editar)
     public function edit(administrador $administrador)
     {
         //
@@ -122,10 +160,12 @@ class AdministradorController extends Controller
      * @param  \App\Models\administrador  $administrador
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Actualizar)
-    public function update(Request $request, administrador $administrador)
+    // ESTA FUNCION LE PERMITE AL ADMIN MODIFICAR LAS RECETAS
+    public function update(Request $request, $id)
     {
-        //
+        $datosRecetas = $request->except(['_token','_method']);
+        recetas::where(['id'=>$id])->update($datosRecetas);
+        return back();
     }
 
     /**
@@ -134,9 +174,16 @@ class AdministradorController extends Controller
      * @param  \App\Models\administrador  $administrador
      * @return \Illuminate\Http\Response
      */
-    // Esta funcion esta a la espera... (Eliminar)
-    public function destroy(administrador $administrador)
+    // ESTA FUNCION LE PERMITE AL ADMIN ELIMINAR USUARIOS
+    public function destroy($id)
     {
-        //
+        usuarios::destroy($id);
+        return back();
+    }
+    // ESTA FUNCION LE PERMITE ELIMINAR RECETAS AL ADMIN
+    public function destroy1($id)
+    {
+        recetas::destroy($id);
+        return back();
     }
 }
