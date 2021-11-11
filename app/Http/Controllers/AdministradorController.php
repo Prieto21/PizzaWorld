@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\administrador;
 use App\Models\recetas;
+use App\Models\roles;
+use App\Models\sexo;
+use App\Models\sexos;
+use App\Models\tiporeceta;
 use App\Models\usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -127,6 +131,24 @@ class AdministradorController extends Controller
     public function store(Request $request)
     {
         recetas::create($request->all());
+        // return redirect('/PizzaWorld/UserFav');
+        return back();
+    }
+    public function store1(Request $request)
+    {
+        sexos::create($request->all());
+        // return redirect('/PizzaWorld/UserFav');
+        return back();
+    }
+    public function store2(Request $request)
+    {
+        roles::create($request->all());
+        // return redirect('/PizzaWorld/UserFav');
+        return back();
+    }
+    public function store3(Request $request)
+    {
+        tiporeceta::create($request->all());
         // return redirect('/PizzaWorld/UserFav');
         return back();
     }

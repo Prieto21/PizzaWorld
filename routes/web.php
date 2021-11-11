@@ -72,4 +72,7 @@ Route::get('PizzaWorld/AdminClasesOnline', 'AdministradorController@index6');
 Route::get('PizzaWorld/AdminNosotros', 'AdministradorController@index7');
 Route::get('PizzaWorld/AdminMensajes', 'AdministradorController@index8');
 Route::get('PizzaWorld/DeleteRecet/{id?}', 'AdministradorController@destroy1');
+Route::post('PizzaWorld/sexos', 'AdministradorController@store1');
+Route::post('PizzaWorld/roles', 'AdministradorController@store2');
+Route::post('PizzaWorld/tiporeceta', 'AdministradorController@store3');
 

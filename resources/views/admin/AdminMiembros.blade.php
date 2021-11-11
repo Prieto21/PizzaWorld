@@ -217,7 +217,13 @@
                                                                 <p class="card-text" style="color: white;">
 
                                                                     <input type="text" class="form-control" name="edad" value="{{$info->edad}}">
-                                                                    <input type="text" class="form-control" name="id_rol" value="{{$info->id_rol}}" hidden>
+                                                                    <input type="text" class="form-control" name="id_rol" value="{{$info->id_rol}}">
+                                                                    <p style="color: white;">
+                                                                        1.Admin &nbsp
+                                                                        2.User
+                                                                    </p>
+                                                                    
+                                                                
                                                                 </p>
                                                             </td>
                                                         </tr>
