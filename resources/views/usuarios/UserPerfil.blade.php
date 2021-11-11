@@ -82,7 +82,7 @@
                                         <td></td>
                                         <td>
                                             <p class="card-text">
-                                                <center>{{$info->sexo}}</center>
+                                                <center>{{$info->sex}}</center>
                                             </p>
                                         </td>
                                     </tr>
@@ -231,7 +231,7 @@
                                                                         <td>
                                                                             <p class="card-text">
                                                                                 <select class="form-select" name="id_sexo" aria-label="Default select example" required>
-                                                                                    <option hidden selected> {{$info->sexo}}</option>
+                                                                                    <option hidden selected> {{$info->sex}}</option>
                                                                                     <option value="2">Hombre</option>
                                                                                     <option value="1">Mujer</option>
                                                                                     <option value="3">Otro</option>

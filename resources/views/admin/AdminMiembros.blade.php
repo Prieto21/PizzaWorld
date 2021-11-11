@@ -30,7 +30,7 @@
                             {{$info->user}} <br>
                             {{$info->email}}<br>
                             {{$info->contra}}<br>
-                            {{$info->sexo}}<br>
+                            {{$info->sex}}<br>
                             {{$info->rol}}
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                                             <td>
                                                                 <p class="card-text">
                                                                     <select class="form-select" name="id_sexo" aria-label="Default select example">
-                                                                        <option hidden selected>{{$info->sexo}}</option>
+                                                                        <option hidden selected>{{$info->sex}}</option>
                                                                         <option value="2">Hombre</option>
                                                                         <option value="1">Mujer</option>
                                                                         <option value="3">Otro</option>

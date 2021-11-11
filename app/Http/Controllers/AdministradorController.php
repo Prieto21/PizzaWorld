@@ -38,8 +38,8 @@ class AdministradorController extends Controller
     {
         $perfilAdmin = DB::table('usuarios')
         ->join('roles', 'roles.id', '=', 'usuarios.id_rol')
-        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
-        ->select('usuarios.nombres','usuarios.id','usuarios.id_rol','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo', 'roles.rol')
+        ->join('sexos', 'sexos.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres','usuarios.id','usuarios.id_rol','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexos.sex', 'roles.rol')
         ->where('usuarios.id_rol', '=', '1')
         // ->where('usuarios.id_sexo', '=', '3') 
         ->get();
@@ -50,8 +50,8 @@ class AdministradorController extends Controller
     {
         $comunidad = DB::table('usuarios')
         ->join('roles', 'roles.id', '=', 'usuarios.id_rol')
-        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
-        ->select('usuarios.nombres', 'usuarios.id','usuarios.id_rol','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo', 'roles.rol')
+        ->join('sexos', 'sexos.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres', 'usuarios.id','usuarios.id_rol','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexos.sex', 'roles.rol')
         ->where('usuarios.id_rol', '=', '2')
         // ->where('usuarios.id_sexo', '=', '3') 
         ->get();

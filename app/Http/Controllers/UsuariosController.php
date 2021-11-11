@@ -29,8 +29,8 @@ class UsuariosController extends Controller
     {
         $perfilUser = DB::table('usuarios')
         
-        ->join('sexo', 'sexo.id', '=', 'usuarios.id_sexo' )
-        ->select('usuarios.nombres','usuarios.id','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexo.sexo')
+        ->join('sexos', 'sexos.id', '=', 'usuarios.id_sexo' )
+        ->select('usuarios.nombres','usuarios.id','usuarios.id_sexo','usuarios.apellidos','usuarios.user','usuarios.foto', 'usuarios.contra','usuarios.email','usuarios.edad','sexos.sex')
         ->where('usuarios.id', '=', '5')
         // ->where('usuarios.id_sexo', '=', '3') 
         ->get();
